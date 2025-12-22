@@ -105,7 +105,8 @@ header .logo {
 }
 
 .gallery img {
-    width: 28%;
+    width: 30%;
+    height: 500px;
     border-radius: 15px;
     object-fit: cover;
 }
@@ -284,5 +285,135 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+}
+
+.footer p {
+    padding: 1%;
+    margin: 0 0 10px 0;
+}
+
+.contact a {
+    color: #e6d7b9; /* beige de tu página */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* TABLET (≤ 992px) */
+@media (max-width: 992px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section img {
+        width: 80%;
+    }
+
+    .hero-text {
+        width: 90%;
+    }
+
+    .mv-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mv-box {
+        width: 90%;
+    }
+
+    .gallery {
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 45%;
+    }
+}
+
+/* CELULAR (≤ 600px) */
+@media (max-width: 600px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .hero-section img {
+        width: 100%;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
 }

@@ -34,6 +34,56 @@
         .contenido {
             padding: 40px;
         }
+
+        .catalogo {
+            padding: 50px 40px;
+            background-color: #e6d7b9;
+        }
+        
+        .catalogo h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .catalogo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .producto {
+            background-color: #f7e7cd;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .producto img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .producto h3 {
+            margin: 15px 0 10px;
+        }
+        
+        .producto button {
+            background-color: #d6b48a;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .producto button:hover {
+            background-color: #c5a374;
+        }
+
     </style>
 
 </head>
@@ -51,6 +101,31 @@
         <h1>Modelos de Cortinas Tradicionales</h1>
         <p>Aquí puedes colocar los productos, imágenes o catálogo.</p>
     </div>
+    <section id="cortinas" class="catalogo">
+    <h2>Cortinas</h2>
+
+    <div class="catalogo-grid">
+
+        <div class="producto">
+            <img src="https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg" alt="Cortina Tradicional">
+            <h3>Cortinas Tradicionales</h3>
+            <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.pexels.com/photos/7534224/pexels-photo-7534224.jpeg" alt="Cortina Blackout">
+            <h3>Cortinas Blackout</h3>
+            <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.pexels.com/photos/5825576/pexels-photo-5825576.jpeg" alt="Cortina Roller">
+            <h3>Cortinas Roller</h3>
+            <button>Ver más</button>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
