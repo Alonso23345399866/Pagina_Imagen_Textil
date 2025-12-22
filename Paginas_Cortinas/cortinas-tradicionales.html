@@ -83,7 +83,42 @@
         .producto button:hover {
             background-color: #c5a374;
         }
+        #catalogo-productos {
+            width: 100%;
+            max-width: 1200px;       /* controla qué tan ancho llega */
+            margin: 0 auto;
+            padding: 40px 20px;
 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+            gap: 24px;
+
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .producto {
+            background-color: #f7e7cd;
+            padding: 14px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+        }
+        
+        .producto img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;       /* evita deformaciones */
+            border-radius: 14px;
+        }
+
+        /* NOMBRE */
+        .producto h3 {
+            margin-top: 12px;
+            font-size: 16px;
+            font-weight: 600;
+        }
     </style>
 
 </head>
@@ -101,31 +136,17 @@
         <h1>Modelos de Cortinas Tradicionales</h1>
         <p>Aquí puedes colocar los productos, imágenes o catálogo.</p>
     </div>
-    <section id="cortinas" class="catalogo">
-    <h2>Cortinas</h2>
+    <section id="cortinas-tradicionales" class="catalogo">
+        <h2>Cortinas Tradicionales</h2>
 
-    <div class="catalogo-grid">
+    <!-- ESTE ES EL CONTENEDOR QUE FALTABA -->
+        <div id="catalogo-productos" data-categoria="cortinas_tradicionales"></div>
+    </section>
 
-        <div class="producto">
-            <img src="https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg" alt="Cortina Tradicional">
-            <h3>Cortinas Tradicionales</h3>
-            <button>Ver más</button>
-        </div>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/productos.js"></script>
 
-        <div class="producto">
-            <img src="https://images.pexels.com/photos/7534224/pexels-photo-7534224.jpeg" alt="Cortina Blackout">
-            <h3>Cortinas Blackout</h3>
-            <button>Ver más</button>
-        </div>
-
-        <div class="producto">
-            <img src="https://images.pexels.com/photos/5825576/pexels-photo-5825576.jpeg" alt="Cortina Roller">
-            <h3>Cortinas Roller</h3>
-            <button>Ver más</button>
-        </div>
-
-    </div>
-</section>
+    
 
 </body>
 </html>

@@ -25,3 +25,26 @@ document.addEventListener("click", () => {
         menu.style.display = "none";
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const contenedor = document.getElementById("catalogo-productos");
+    if (!contenedor) return;
+
+    const categoria = contenedor.dataset.categoria;
+
+    if (!productos[categoria]) {
+        console.error("Categoría no encontrada:", categoria);
+        return;
+    }
+
+    productos[categoria].forEach(p => {
+        contenedor.innerHTML += `
+            <div class="producto">
+                <img src="${p.imagen}">
+                <h3>${p.nombre}</h3>
+            </div>
+        `;
+    });
+
+});
