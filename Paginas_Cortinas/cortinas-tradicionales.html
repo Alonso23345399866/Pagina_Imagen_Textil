@@ -6,6 +6,10 @@
     <title>Cortinas Tradicionales - Imagen Textil</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -83,41 +87,62 @@
         .producto button:hover {
             background-color: #c5a374;
         }
+
         #catalogo-productos {
             width: 100%;
-            max-width: 1200px;       /* controla qué tan ancho llega */
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 40px 20px;
 
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
 
-            margin: 0 auto;
             box-sizing: border-box;
         }
-        
+
         .producto {
             background-color: #f7e7cd;
             padding: 14px;
             border-radius: 18px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
         }
-        
+
         .producto img {
             width: 100%;
-            height: 260px;
-            object-fit: cover;       /* evita deformaciones */
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
             border-radius: 14px;
+            display: block;
         }
-
+    
         /* NOMBRE */
         .producto h3 {
             margin-top: 12px;
             font-size: 16px;
             font-weight: 600;
+        }
+
+        @media (max-width: 1200px) {
+            #catalogo-productos {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            #catalogo-productos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            #catalogo-productos {
+                grid-template-columns: 1fr;
+            }
+
+            .producto img {
+                height: 200px;
+            }
         }
     </style>
 
